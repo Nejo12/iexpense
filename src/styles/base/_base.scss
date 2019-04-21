@@ -1,0 +1,22 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background: #eee;
+    font-size: $m-size;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.is-active {
+    font-weight: bold;
+    padding: 1rem;
+}
