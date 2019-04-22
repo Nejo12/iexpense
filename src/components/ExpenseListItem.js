@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+import moment from "moment";
+
+const formatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "EUR",
+  minimumFractionDigits: 2
+});
 
 const ExpenseListItem = ({ id, description, amount, createdAt }) => (
   <div>
@@ -8,7 +14,8 @@ const ExpenseListItem = ({ id, description, amount, createdAt }) => (
       <h3>{description}</h3>
     </Link>
     <p>
-      {amount} - {createdAt}
+      {formatter.format(amount / 100)} -{" "}
+      {moment(createdAt).format("dddd,  Do of MMMM, YYYY")}
     </p>
   </div>
 );
