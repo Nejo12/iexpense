@@ -8,6 +8,8 @@ import { addExpense } from "./actions/expenses";
 import getVisibleExpenses from "./selectors/expenses";
 import "normalize.css/normalize.css";
 import "./styles/styles.scss";
+import "./firebase/firebase";
+import "./samples/promises";
 
 const store = configureStore();
 
