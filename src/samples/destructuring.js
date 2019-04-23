@@ -31,6 +31,6 @@
 // Array Destructuring
 //
 
-const address = ["HansaStraße 52", "13088", "Weissensee", "Berlin", "Germany"];
+const address = ["HansaStraße", "13088", "Weissensee", "Berlin", "Germany"];
 const [, , bezirk, city, country] = address;
 console.log(`You are in ${city}, ${country}.`);
