@@ -13,7 +13,6 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-// child_removed child_changed...
 database.ref("expenses").on("child_removed", snapshot => {
   console.log(snapshot.key, snapshot.val());
 });
