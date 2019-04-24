@@ -1,5 +1,5 @@
 import moment from "moment";
-import filtersReducers from "../../src/reducers/filters";
+import filtersReducers from "../../reducers/filters";
 
 test("Should setup default filter values", () => {
   const state = filtersReducers(undefined, { type: "@@INIT" });

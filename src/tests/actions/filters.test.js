@@ -5,7 +5,7 @@ import {
   sortByDate,
   setStartDate,
   setEndDate
-} from "../../src/actions/filters";
+} from "../../actions/filters";
 
 test("Should check for setting Text Filters with default value", () => {
   const action = setTextFilter("");
