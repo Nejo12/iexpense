@@ -36,7 +36,7 @@ test("Should set description on input change", () => {
   expect(wrapper.state("description")).toBe(value);
 });
 
-test("Should set note on textaread change", () => {
+test("Should set note on textarea change", () => {
   const value = "New note";
   const wrapper = shallow(<ExpenseForm />);
   wrapper.find("textarea").simulate("change", {
@@ -69,7 +69,7 @@ test("Should not set amount if invalid input", () => {
   expect(wrapper.state("amount")).toBe("");
 });
 
-test("Shouldcall onSubmit prop forvalid form submission", () => {
+test("Should call onSubmit prop for valid form submission", () => {
   const onSubmitSpy = jest.fn();
   const wrapper = shallow(
     <ExpenseForm expense={expenses[0]} onSubmit={onSubmitSpy} />
@@ -93,7 +93,7 @@ test("Should set new date on dateChange", () => {
   expect(wrapper.state("createdAt")).toEqual(now);
 });
 
-test("SHould set calender focus on Change", () => {
+test("Should set calender focus on Change", () => {
   const focused = true;
   const wrapper = shallow(<ExpenseForm />);
   wrapper.find("SingleDatePicker").prop("onFocusChange")({ focused });
