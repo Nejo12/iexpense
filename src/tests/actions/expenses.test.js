@@ -2,6 +2,7 @@ import {
   startAddExpense,
   addExpense,
   removeExpense,
+  startRemoveExpense,
   editExpense,
   setExpenses,
   startSetExpenses
@@ -24,7 +25,7 @@ beforeEach(done => {
     .then(() => done());
 });
 
-test("should check for remove expense action object", () => {
+test("should setup remove expense action object", () => {
   const action = removeExpense({ id: "123abc" });
   expect(action).toEqual({
     type: "REMOVE_EXPENSE",
@@ -32,7 +33,26 @@ test("should check for remove expense action object", () => {
   });
 });
 
-test("Should check for editExpense action ojbect", () => {
+test("Shouldremove expense from firebase", done => {
+  const store = createMockStore({});
+  const id = expenses[2].id;
+  store
+    .dispatch(startRemoveExpense({ id }))
+    .then(() => {
+      const actions = store.getActions();
+      expect(actions[0]).toEqual({
+        type: "REMOVE_EXPENSE",
+        id
+      });
+      return database.ref(`expenses/${id}`).once("value");
+    })
+    .then(snapshot => {
+      expect(snapshot.val()).toBeFalsy();
+      done();
+    });
+});
+
+test("Should setup editExpense action ojbect", () => {
   const action = editExpense("id", "New value");
   expect(action).toEqual({
     type: "EDIT_EXPENSE",
