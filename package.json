@@ -1,7 +1,7 @@
 {
   "name": "iexpenses",
   "version": "1.0.0",
-  "description": "### **The react app to manage your expenses.** **The _awesome features_ include:** - [x] Management of expenses from the past, present and future :smirk: - [x] Privacy :cool: - access resctricted to individual signed in user. No third party involved. - [x] Absolute mobile responsiveness :wink:",
+  "description": "",
   "main": "index.js",
   "engines": {
     "node": "8.12.0"
