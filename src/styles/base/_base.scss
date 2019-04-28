@@ -1,22 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 body {
-    font-family: Georgia, "Times New Roman", Times, serif;
-    background: #eee;
-    font-size: $m-size;
+  color: $dark-grey;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: #eee;
+  font-size: $m-size;
+  line-height: 1.6;
 }
 
 button {
-    cursor: pointer;
-    outline: none;
+  cursor: pointer;
+  outline: none;
 }
 
 button:disabled {
-    cursor: default;
+  cursor: default;
 }
 
 .is-active {
-    font-weight: bold;
-    padding: 1rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+::placeholder {
+  font-size: 1.4rem;
 }
