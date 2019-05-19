@@ -27,3 +27,7 @@
 - Git/GitHub Integration
 
 Checkout the funtionality on [Heroku](https://react-iexpense.herokuapp.com/).
+
+## Demo
+
+![Demo](public/images/222.gif)
